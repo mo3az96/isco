@@ -495,6 +495,9 @@ input[type=search]::-webkit-search-results-decoration {
   color: #d9001b;
 }
 
+.blog-item {
+  position: relative;
+}
 @media (max-width: 991px) {
   .blog-item {
     max-width: 370px;
@@ -2035,6 +2038,44 @@ html[dir=ltr] .top-header-sec .top-contact-method {
 }
 @media (max-width: 767px) {
   .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.blogs-grid-sec {
+  padding: 70px 0 80px;
+  background-image: url(../images/pattern/services.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #fff;
+}
+@media (max-width: 991px) {
+  .blogs-grid-sec {
+    padding: 60px 0;
+  }
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .blogs-grid {
+    gap: 30px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .blogs-grid {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .blogs-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
