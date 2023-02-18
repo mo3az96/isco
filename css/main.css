@@ -856,6 +856,116 @@ input[type=search]::-webkit-search-results-decoration {
   color: #fff;
 }
 
+.form-title {
+  font-size: 24px;
+  color: #1a1818;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+.form-title::after {
+  display: block;
+  line-height: 10px;
+  content: url(../images/pattern/border.svg);
+}
+@media (max-width: 991px) {
+  .form-title {
+    text-align: center;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-cont {
+  position: relative;
+}
+.input-cont .input-icon {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  inset-inline-start: 15px;
+}
+html[dir=rtl] .input-cont .input-icon ~ .custom-input {
+  padding-right: 55px;
+}
+html[dir=ltr] .input-cont .input-icon ~ .custom-input {
+  padding-left: 55px;
+}
+
+.custom-input {
+  width: 100%;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #1a1818;
+  line-height: 1.214;
+  transition: border-color 0.3s ease-in-out;
+}
+.custom-input::-moz-placeholder {
+  color: #666666;
+}
+.custom-input::placeholder {
+  color: #666666;
+}
+html[dir=rtl] .custom-input::-moz-placeholder {
+  text-align: right;
+}
+html[dir=rtl] .custom-input::placeholder {
+  text-align: right;
+}
+html[dir=ltr] .custom-input::-moz-placeholder {
+  text-align: left;
+}
+html[dir=ltr] .custom-input::placeholder {
+  text-align: left;
+}
+.custom-input:focus {
+  border-color: #d9001b;
+}
+
+textarea.custom-input {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  resize: none;
+  height: 116px;
+}
+
+select.custom-input {
+  background-image: url(../images/pattern/arrow.svg);
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+html[dir=rtl] select.custom-input {
+  background-position: left 15px top 50%;
+}
+html[dir=ltr] select.custom-input {
+  background-position: right 15px top 50%;
+}
+
+.form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  background-color: #d9001b;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+.form-btn:hover {
+  background-color: #1a1818;
+}
+
 header {
   background-color: #fff;
 }
@@ -1811,6 +1921,35 @@ html[dir=ltr] .top-header-sec .top-contact-method {
   color: #d9001b;
 }
 
+.request-sec {
+  padding: 60px 0;
+  background-image: url(../images/pattern/form.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #f7f9fc;
+}
+@media (max-width: 991px) {
+  .request-sec {
+    padding: 40px 0;
+  }
+}
+
+.request-cont {
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1607843137);
+  background-color: #fff;
+  max-width: 470px;
+  margin: auto;
+}
+@media (max-width: 991px) {
+  .request-cont {
+    padding: 20px 15px;
+  }
+}
+
 footer {
   background-color: #1a1818;
   position: relative;
@@ -1882,11 +2021,11 @@ footer {
     position: absolute;
     inset-inline-end: 0;
     top: 0;
-    transform: rotate(-90deg);
     transition: transform 0.3s ease-in-out;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7429%) hue-rotate(123deg) brightness(106%) contrast(103%);
   }
   .footer-list .footer-title.active::before {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
 }
 
