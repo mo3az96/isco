@@ -2081,6 +2081,44 @@ html[dir=ltr] .top-header-sec .top-contact-method {
   }
 }
 
+.projects-grid-sec {
+  padding: 70px 0 80px;
+  background-image: url(../images/pattern/services.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #fff;
+}
+@media (max-width: 991px) {
+  .projects-grid-sec {
+    padding: 60px 0;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .projects-grid {
+    gap: 30px 15px;
+  }
+}
+@media (max-width: 991px) {
+  .projects-grid {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 footer {
   background-color: #1a1818;
   position: relative;
