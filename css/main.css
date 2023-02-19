@@ -2119,6 +2119,100 @@ html[dir=ltr] .top-header-sec .top-contact-method {
   }
 }
 
+.media-grid-sec {
+  background-color: #f7f9fc;
+  padding: 50px 0 64px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 991px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.media-item {
+  position: relative;
+  max-width: 100%;
+  padding-top: 108.108108108%;
+}
+.media-item:first-of-type, .media-item:nth-of-type(4n + 1) {
+  padding-top: 51.9480519481%;
+  grid-column: 1/span 2;
+}
+@media (max-width: 991px) {
+  .media-item:first-of-type, .media-item:nth-of-type(4n + 1) {
+    padding-top: 108.108108108%;
+    grid-column: unset;
+  }
+}
+.media-item:nth-of-type(4n) {
+  padding-top: 51.9480519481%;
+  grid-column: 2/span 2;
+}
+@media (max-width: 991px) {
+  .media-item:nth-of-type(4n) {
+    padding-top: 108.108108108%;
+    grid-column: unset;
+  }
+}
+.media-item .gallery-img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.media-item .gallery-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.media-item .gallery-img:after {
+  content: url(../images/pattern/play.svg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  right: 30px;
+  left: 30px;
+  background-color: rgba(217, 0, 27, 0.72);
+  border-radius: 100%;
+  transform-origin: center;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 991px) {
+  .media-item .gallery-img:after {
+    top: 20px;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+  }
+}
+.media-item .gallery-img:hover img {
+  transform: scale(1.05);
+}
+.media-item .gallery-img:hover:after {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  border-radius: 0;
+}
+
 footer {
   background-color: #1a1818;
   position: relative;
