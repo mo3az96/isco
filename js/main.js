@@ -218,6 +218,17 @@ $(document).ready(function () {
       $(".footer-list .footer-title").not(this).siblings().slideUp(500);
     });
   }
+  /************************************ Subcat ************************************/
+  $(".desc-toggle-btn").click(function (e) {
+    var text = $(this).parents(".subsubcat-item").find(".subsubcat-desc");
+    var height = text.prop("scrollHeight");
+    $(this).toggleClass("active");
+    if ($(this).hasClass("active")) {
+      text.height(height).addClass("active");
+    } else {
+      text.height(24).removeClass("active");
+    }
+  });
 });
 
 /************************************ Lazyload ************************************/
