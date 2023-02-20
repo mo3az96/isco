@@ -229,6 +229,30 @@ $(document).ready(function () {
       text.height(24).removeClass("active");
     }
   });
+  /************************************ lattest ************************************/
+  if ($(window).width() <= 991) {
+    var lattestSwiper = new Swiper(".lattest-slider .swiper", {
+      loop: true,
+      pagination: {
+        el: ".lattest-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        767: {
+          spaceBetween: 15,
+          slidesPerView: 2,
+        },
+      },
+      on: {
+        init: function (swiper) {
+          lazyLoad();
+        },
+      },
+    });
+  }
 });
 
 /************************************ Lazyload ************************************/
