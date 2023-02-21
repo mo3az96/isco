@@ -85,6 +85,7 @@ $(document).ready(function () {
       0: {
         slidesPerView: 1,
         allowTouchMove: true,
+        loop: true,
       },
       767: {
         spaceBetween: 30,
@@ -116,6 +117,7 @@ $(document).ready(function () {
       0: {
         slidesPerView: 1,
         allowTouchMove: true,
+        loop: true,
       },
       767: {
         spaceBetween: 30,
@@ -152,6 +154,7 @@ $(document).ready(function () {
       0: {
         slidesPerView: 1,
         allowTouchMove: true,
+        loop: true,
       },
       767: {
         spaceBetween: 30,
@@ -229,12 +232,54 @@ $(document).ready(function () {
       text.height(24).removeClass("active");
     }
   });
-  /************************************ lattest ************************************/
+  /************************************ Lattest ************************************/
   if ($(window).width() <= 991) {
     var lattestSwiper = new Swiper(".lattest-slider .swiper", {
       loop: true,
       pagination: {
         el: ".lattest-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        767: {
+          spaceBetween: 15,
+          slidesPerView: 2,
+        },
+      },
+      on: {
+        init: function (swiper) {
+          lazyLoad();
+        },
+      },
+    });
+  }
+  /************************************ Project Imgs ************************************/
+  var projectSwiper = new Swiper(".single-project-slider .swiper", {
+    spaceBetween: 10,
+    loop: true,
+    speed: 500,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".single-project-slider .swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+  /************************************ Related ************************************/
+  if ($(window).width() <= 991) {
+    var relatedSwiper = new Swiper(".related-slider .swiper", {
+      loop: true,
+      pagination: {
+        el: ".related-slider .swiper-pagination",
         clickable: true,
       },
       breakpoints: {
