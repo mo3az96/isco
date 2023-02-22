@@ -1558,6 +1558,7 @@ html[dir=ltr] .top-header-sec .top-contact-method {
           padding-inline-end: 85px;
   -moz-columns: 2;
        columns: 2;
+  -webkit-columns: 2;
   gap: 30px;
   position: relative;
   z-index: 2;
