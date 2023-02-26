@@ -1019,6 +1019,14 @@ html[dir=ltr] select.custom-input {
   background-color: #1a1818;
 }
 
+.has_error .custom-input {
+  border-color: #f00;
+}
+.has_error .error-hint {
+  font-size: 12px;
+  color: #f00;
+}
+
 header {
   background-color: #fff;
 }
@@ -2386,11 +2394,17 @@ html[dir=ltr] .contact-item .item-link svg {
   height: 215px;
   margin: 0 -15px;
 }
+.contact-form .flex-cont.form_has_error {
+  height: 280px;
+}
 @media (max-width: 991px) {
   .contact-form .flex-cont {
     height: auto;
     display: block;
     margin: 0;
+  }
+  .contact-form .flex-cont.form_has_error {
+    height: auto;
   }
 }
 .contact-form .form-group {
